@@ -2,10 +2,14 @@ body {
 	margin: 0;
 }
 
-div.content{
-	padding-left: 15%;
-	padding-right: 15%;
-	margin: 0;
+section.content,
+nav.content {
+	padding-left: 16%;
+	padding-right: 16%;
+}
+
+p {
+	font-size: 1.1em;
 }
 
 ul {
