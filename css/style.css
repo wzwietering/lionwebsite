@@ -52,8 +52,17 @@ figure .text {
 	position:relative;
 	bottom:50px;
 	visibility:hidden;
+	opacity:0;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
 }
 
 figure:hover .text {
 	visibility:visible;
+	opacity: 1;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+img:hover {
 }
