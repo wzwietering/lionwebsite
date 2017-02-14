@@ -78,3 +78,7 @@ figure:hover .source {
 	visibility:visible;
 	opacity: 1;
 }
+
+figure {
+	margin-bottom: -50px;
+}
