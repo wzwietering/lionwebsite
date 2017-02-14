@@ -39,20 +39,21 @@ li a:hover {
 
 img {
 	width: 100%;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
 }
 
 figcaption {
-	display: block;
 	text-align: center;
 	background: rgba(255, 255, 255, 0.6);
 	padding: 10px;
 }
 
 figure .text {
-	position:relative;
-	bottom:50px;
-	visibility:hidden;
-	opacity:0;
+	position: relative;
+	bottom: 50px;
+	visibility: hidden;
+	opacity: 0;
 	-webkit-transition: 0.5s ease-in-out;
 	transition: 0.5s ease-in-out;
 }
@@ -60,9 +61,15 @@ figure .text {
 figure:hover .text {
 	visibility:visible;
 	opacity: 1;
+	-webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 	-webkit-transition: 0.5s ease-in-out;
 	transition: 0.5s ease-in-out;
 }
 
 img:hover {
+	-webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
 }
