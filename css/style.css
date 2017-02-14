@@ -77,17 +77,4 @@ figure:hover .text,
 figure:hover .source {
 	visibility:visible;
 	opacity: 1;
-	-ms-transform: scale(1.1, 1.1);
-	-webkit-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
-	-webkit-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
-}
-
-img:hover {
-	-ms-transform: scale(1.1, 1.1);
-	-webkit-transform: scale(1.1, 1.1);
-    transform: scale(1.1, 1.1);
-	-webkit-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
 }
