@@ -36,3 +36,24 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+img {
+	width: 100%;
+}
+
+figcaption {
+	display: block;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.6);
+	padding: 10px;
+}
+
+figure .text {
+	position:relative;
+	bottom:50px;
+	visibility:hidden;
+}
+
+figure:hover .text {
+	visibility:visible;
+}
