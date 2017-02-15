@@ -112,7 +112,7 @@ figure.gallery {
 
 @media screen and (max-width: 900px) {
   .box {
-    width: 100%;
+    width: auto;
   }
 }
 
