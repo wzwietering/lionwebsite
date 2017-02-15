@@ -90,7 +90,6 @@ figure {
     width: 33%;
 	position: relative;
 	display: inline-block;
-	justify-content: center;
 }
 
 figure.gallery {
@@ -103,6 +102,18 @@ figure.gallery {
 .galleryimage {
 	height: 300px;
 	width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .box {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .box {
+    width: 100%;
+  }
 }
 
 table {
