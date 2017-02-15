@@ -26,6 +26,7 @@ li {
     float: left;
 }
 
+label,
 li a {
     display: inline-block;
     color: white;
@@ -34,12 +35,14 @@ li a {
     text-decoration: none;
 }
 
+label:hover,
 li a:hover {
     background-color: #111;
 }
 
 img {
-	width: 100%;
+	max-width: 100% !important;
+	height: auto;
 	-webkit-transition: 0.5s ease-in-out;
 	transition: 0.5s ease-in-out;
 }
@@ -104,18 +107,6 @@ figure.gallery {
 	width: auto;
 }
 
-@media screen and (max-width: 1200px) {
-  .box {
-    width: 49%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .box {
-    width: auto;
-  }
-}
-
 table {
 	width:100%;
 }
@@ -123,4 +114,41 @@ table {
 table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + #menu {
+  max-height: 50px;
+}
+
+#toggletext {
+	display: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.box {
+	  width: 49%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.box {
+	  width: auto;
+	}
+	
+	label,
+	li a {
+	  display: block;
+	}
+	 
+	li {
+	  float: none;
+	}
+	
+	#toggletext {
+		display: inline;
+	}
 }
