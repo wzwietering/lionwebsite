@@ -13,6 +13,7 @@ p {
 	font-size: 1.1em;
 }
 
+/*Menu*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -43,10 +44,9 @@ li a:hover {
 img {
 	max-width: 100% !important;
 	height: auto;
-	-webkit-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
 }
 
+/*Image descriptions*/
 figcaption {
 	text-align: center;
 	background: rgba(255, 255, 255, 0.6);
@@ -107,6 +107,7 @@ figure.gallery {
 	width: auto;
 }
 
+/*Table layout*/
 table {
 	width:100%;
 }
@@ -116,18 +117,20 @@ table, th, td {
 	border-collapse: collapse;
 }
 
+/*Menu toggle*/
 #menu-toggle {
-  display: none;
+	display: none;
 }
 
-#menu-toggle:checked + #menu {
-  max-height: 50px;
+#menu-toggle:not(:checked) + #menu {
+	max-height: 50px;
 }
 
 #toggletext {
 	display: none;
 }
 
+/*Smaller screen layouts*/
 @media screen and (max-width: 1200px) {
 	.box {
 	  width: 49%;
@@ -150,5 +153,11 @@ table, th, td {
 	
 	#toggletext {
 		display: inline;
+	}
+	
+	figure .text,
+	figure .source {
+		opacity: 1;
+		visibility: visible;
 	}
 }
