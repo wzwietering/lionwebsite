@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
 body {
 	margin: 0;
 	margin-bottom: 50px;
+	font-family: 'PT Sans', sans-serif;
 }
 
 section.content,
@@ -42,7 +45,7 @@ li a:hover {
 }
 
 img {
-	max-width: 100% !important;
+	max-width: 100%;
 	height: auto;
 }
 
@@ -105,6 +108,7 @@ figure.gallery {
 .galleryimage {
 	height: 300px;
 	width: auto;
+	object-fit: cover;
 }
 
 /*Table layout*/
