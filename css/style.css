@@ -144,7 +144,7 @@ table, th, td {
 
 /*Link list*/
 .linklist {
-    list-style-type: none;
+    list-style-image: url('http://icons.iconarchive.com/icons/martin-berube/animal/16/lion-icon.png');
 }
 
 a.linklistlink {
@@ -167,6 +167,10 @@ a.linklistlink:active {
 	color: #56096d;
 }
 
+a.linklistlink:focus {
+	color: #e212d5;
+}
+
 /*Smaller screen layouts*/
 @media screen and (max-width: 1200px) {
 	.box {
@@ -180,11 +184,11 @@ a.linklistlink:active {
 	}
 	
 	label,
-	li a {
+	li.navlink a {
 	  display: block;
 	}
 	 
-	li {
+	li.navlink {
 	  float: none;
 	}
 	
@@ -196,5 +200,9 @@ a.linklistlink:active {
 	figure .source {
 		opacity: 1;
 		visibility: visible;
+	}
+	
+	#lionlogo {
+		display: none;
 	}
 }
