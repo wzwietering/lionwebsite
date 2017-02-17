@@ -17,6 +17,13 @@ p {
 	font-size: 1.1em;
 }
 
+.cpage {
+	font-size: 110%;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
 /*Menu*/
 ul.navbar {
     list-style-type: none;
