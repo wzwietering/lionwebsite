@@ -148,7 +148,7 @@ table, th, td {
 
 /*Link list*/
 .linklist {
-    list-style-image: url('http://icons.iconarchive.com/icons/martin-berube/animal/16/lion-icon.png');
+	list-style-type: none;
 }
 
 a.linklistlink {

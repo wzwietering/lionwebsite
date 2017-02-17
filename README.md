@@ -1,5 +1,4 @@
 # lionwebsite
 An awesome website about lions
 
-Plan:
-Five pages: Home/Introduction, Habitat, Wildlife, Protection, Media, Useful links
+Hopefully you can enjoy this website and learn a lot about the great animal which the lion is. This website is also suitable for mobile devices.
