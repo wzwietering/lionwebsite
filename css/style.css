@@ -4,6 +4,7 @@ body {
 	margin: 0;
 	margin-bottom: 50px;
 	font-family: 'PT Sans', sans-serif;
+	text-align: center;
 }
 
 section.content,
@@ -17,7 +18,7 @@ p {
 }
 
 /*Menu*/
-ul {
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -26,12 +27,12 @@ ul {
 	margin-bottom: 10px;
 }
 
-li {
+li.navlink {
     float: left;
 }
 
 label,
-li a {
+li.navlink a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -40,7 +41,7 @@ li a {
 }
 
 label:hover,
-li a:hover {
+li.navlink a:hover {
     background-color: #111;
 }
 
@@ -132,6 +133,31 @@ table, th, td {
 
 #toggletext {
 	display: none;
+}
+
+/*Link list*/
+.linklist {
+    list-style-type: none;
+}
+
+a.linklistlink {
+	text-decoration: none;
+}
+
+a.linklistlink:link {
+	color: #1448e5;
+}
+
+a.linklistlink:visited {
+	color: #8910b5;
+}
+
+a.linklistlink:hover {
+	font-weight: bold;
+}
+
+a.linklistlink:active {
+	color: #56096d;
 }
 
 /*Smaller screen layouts*/
