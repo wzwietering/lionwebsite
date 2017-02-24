@@ -219,4 +219,8 @@ a.linklistlink:focus {
 	#lionlogo {
 		display: none;
 	}
+	
+	table {
+		width: 100% !important;
+	}
 }
