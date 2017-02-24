@@ -17,6 +17,11 @@ nav.content {
 	padding-right: 16%;
 }
 
+nav.content {
+    overflow: hidden;
+    background-color: #db9200;
+}
+
 p {
 	font-size: 1.1em;
 }
@@ -33,8 +38,6 @@ ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #db9200;
 	margin-bottom: 10px;
 }
 
@@ -187,6 +190,11 @@ a.linklistlink:active {
 
 a.linklistlink:focus {
 	color: #e212d5;
+}
+
+.vid {
+	width: 100%;
+	height: 300px;
 }
 
 /*Smaller screen layouts*/
