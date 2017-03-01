@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="icon" type="image/x-icon" href="../images/lion.ico">
+		<script src="../js/maps.js"></script>
+		<title>Lions are awesome</title>
+		
+		<!--Meta tags-->
+		<meta charset='UTF-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name='keywords' content='lion, lions, habitat, wildlife, nature, africa, life'>
+		<meta name='description' content='Lions life somewhere!'>
+		<meta name='subject' content='Lions'>
+		<meta name='copyright' content='Copyright Jesper Steensma & Wilmer Zwietering 2017'>
+		<meta name='language' content='EN'>
+		<meta name='author' content='Jesper Steensma & Wilmer Zwietering'>
+		<meta name='revised' content='Friday, February 24, 2017'>
+		<meta name='HandheldFriendly' content='True'>
+	</head>
+
+	<body>
+	<input type="checkbox" id="menu-toggle"/>
+	<nav class="content" id="menu">
+		<ul class="navbar">
+			<li class="navlink" id="toggletext"><label for="menu-toggle" style="font-size: 1.6em;">&#8801;</label></li>
+			<li class="navlink" id="lionlogo"><a href="../index.html"><img src="../images/lion-icon.png" height="50" alt="Lion icon"></a></li>
+			<li class="navlink"><a href="../index.html">Home</a></li>
+			<li class="navlink"><a href="../pages/habitat.html">Habitat</a></li>
+			<li class="navlink"><a href="../pages/facts.html">Facts</a></li>
+			<li class="navlink"><a href="../pages/protection.html">Protection</a></li>
+			<li class="navlink"><a href="../pages/media.html">Media</a></li>
+			<li class="navlink"><a href="../pages/useful_links.html">Useful links</a></li>
+			<li class="cpage navlink"><a href="../pages/useful_links.html">Map</a></li>
+		</ul>
+	</nav>
+	<section class="content">
+		<div id="map"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5ekUNEwekfUJdGPC7ia_SEHgXEjjNh8g&libraries=visualization&callback=initMap" async defer></script>
+		<p>This map shows the living areas of lions.</p>
+	</section>
+	</body>
+</html>
