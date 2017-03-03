@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	var map;
-	var default_zoom = 3;
-	var default_center = {lat: 20, lng: 10};
+	var $default_zoom = 3;
+	var $default_center = {lat: 20, lng: 10};
 	
 	$(function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
-			zoom: default_zoom,
-			center: default_center
+			zoom: $default_zoom,
+			center: $default_center
 		});
 	  
 		map.data.loadGeoJson('../data/lionhabitat.geojson');
@@ -20,8 +20,8 @@ $(document).ready(function() {
 		
 		//Make lines bold on hover
 		map.data.addListener('mouseover', function(event) {
-		  map.data.revertStyle();
-		  map.data.overrideStyle(event.feature, {strokeWeight: 4});
+			map.data.revertStyle();
+			map.data.overrideStyle(event.feature, {strokeWeight: 4});
 		});
 		
 		map.data.addListener('mouseout', function(event) {
@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 
 	$("#reset_zoom").click(function() {
-		map.setZoom(default_zoom);
-		map.setCenter(default_center);
-	})
+		map.setZoom($default_zoom);
+		map.setCenter($default_center);
+	});
 });
