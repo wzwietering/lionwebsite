@@ -202,6 +202,20 @@ a.linklistlink:focus {
   margin: 10px 0px 10px 0px;
 }
 
+#reset_zoom {
+	background-color: #db9200;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+}
+
+#reset_zoom:hover {
+	background-color: #DB6300;
+}
+
 /*Smaller screen layouts*/
 @media screen and (max-width: 1200px) {
 	.box {
