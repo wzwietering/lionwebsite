@@ -9,7 +9,7 @@ $(document).ready(function() {
 			center: $default_center
 		});
 	  
-		map.data.loadGeoJson('../data/lionhabitat.geojson');
+		map.data.loadGeoJson('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionhabitat.geojson');
 	  
 		//Style of the map
 		map.data.setStyle({
