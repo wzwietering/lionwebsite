@@ -220,10 +220,17 @@ a.linklistlink:focus {
 	padding: 10px;
 }
 
+/*Style for every comment*/
+#comment_area > * > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 textarea {
 	font-family: 'PT Sans', sans-serif;
 	border-color: #db9200;
 	resize: none;
+	width: 80%;
 }
 
 /*Smaller screen layouts*/
