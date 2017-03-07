@@ -272,3 +272,11 @@ textarea {
 		width: 100% !important;
 	}
 }
+
+#placeholder > div.legend > table {
+  border: 1px solid;
+  width:20%;
+}
+#placeholder{
+	text-align: center;
+}
