@@ -221,11 +221,6 @@ a.linklistlink:focus {
 }
 
 /*Comment styles*/
-#comment_area > * > * {
-	display: inline-block;
-	vertical-align: middle;
-}
-
 #comment_area > * {
 	border-top: thin solid #db9200;
 }
@@ -234,15 +229,18 @@ textarea {
 	font-family: 'PT Sans', sans-serif;
 	border-color: #db9200;
 	resize: none;
+}
+
+#comment_input {
 	width: 80%;
 }
 
-.username {
-	font-style: italic;
+#username_input {
+	width: 15%;
 }
 
 #comment {
-	
+	font-style: italic;
 }
 
 /*Smaller screen layouts*/
@@ -281,6 +279,10 @@ textarea {
 	}
 	
 	table {
+		width: 100% !important;
+	}
+	
+	textarea {
 		width: 100% !important;
 	}
 }
