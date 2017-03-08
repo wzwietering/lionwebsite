@@ -128,25 +128,31 @@ figure.gallery {
 }
 
 /*Table layout*/
-table {
+.facttable {
 	width:100%;;
 }
 
-table#t01{
+.facttable{
 	width: 46%;
 	margin: 0 auto;
 }
 
-table, th, td {
+.facttable, .factth, .facttd {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
 
-table#t01 td:nth-child(2) {
+.facttable, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+
+.facttable td:nth-child(2) {
     background-color: #00e5ff;
 }
 
-table#t01 td:nth-child(3) {
+.facttable td:nth-child(3) {
    background-color:#ff8cfb;
 }
 
@@ -287,9 +293,13 @@ textarea {
 	}
 }
 
+table, th, td{
+	border-color: transparent;
+}
+
 #placeholder > div.legend > table {
-  border: 1px solid;
-  width:20%;
+  border-collapse: true;
+  width: 20%;
 }
 #placeholder{
 	text-align: center;
