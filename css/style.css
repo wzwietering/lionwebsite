@@ -220,10 +220,14 @@ a.linklistlink:focus {
 	padding: 10px;
 }
 
-/*Style for every comment*/
+/*Comment styles*/
 #comment_area > * > * {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+#comment_area > * {
+	border-top: thin solid #db9200;
 }
 
 textarea {
@@ -231,6 +235,14 @@ textarea {
 	border-color: #db9200;
 	resize: none;
 	width: 80%;
+}
+
+.username {
+	font-style: italic;
+}
+
+#comment {
+	
 }
 
 /*Smaller screen layouts*/
