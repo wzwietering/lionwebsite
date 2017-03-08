@@ -295,12 +295,16 @@ textarea {
 
 table, th, td{
 	border-color: transparent;
+	border-collapse:true;
 }
 
 #placeholder > div.legend > table {
   border-collapse: true;
-  width: 20%;
+  width: 14%;
 }
 #placeholder{
-	text-align: center;
+	position:center;
+	margin:auto;
+	width: 900px;
+	height: 450px;
 }
