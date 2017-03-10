@@ -3,8 +3,8 @@ $(document).ready(function()
 		var label;
 		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-        plot([jsondata.elephants]);
-		label = jsondata.elephants.label;
+        plot([{data: jsondata.liondata,  label : jsondata.lionlabel}]);
+		label = jsondata.lionlabel;
 		});		
 
 
@@ -38,11 +38,7 @@ $(document).ready(function()
 
 function replot(){
 	$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-		dataset1=jsondata.lions;
-		dataset2=jsondata.elephants;
-		commbinedata=dataset1,dataset2;
-		datatest=jsondata.lions,jsondata.elephants;
-	plot([datatest]);
+	plot([jsondata]);
 	});
 }
 
