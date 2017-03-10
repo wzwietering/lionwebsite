@@ -4,15 +4,14 @@
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="icon" type="image/x-icon" href="../images/lion.ico">
 		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="../js/maps.js"></script>
-		<script type="text/javascript" src="../js/comments.js"></script>
+		<script type="text/javascript" src="../js/settings.js"></script>
 		<title>Lions are awesome</title>
 		
 		<!--Meta tags-->
 		<meta charset='UTF-8'>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name='keywords' content='lion, lions, habitat, wildlife, nature, africa, life, map, artis, leeuwarden'>
-		<meta name='description' content='Lions life somewhere!'>
+		<meta name='keywords' content='lion, lions, protection, wildlife, nature, africa'>
+		<meta name='description' content='A website about lions'>
 		<meta name='subject' content='Lions'>
 		<meta name='copyright' content='Copyright Jesper Steensma & Wilmer Zwietering 2017'>
 		<meta name='language' content='EN'>
@@ -21,7 +20,7 @@
 		<meta name='HandheldFriendly' content='True'>
 	</head>
 
-	<body>
+	<body id="body">
 	<input type="checkbox" id="menu-toggle"/>
 	<nav class="content" id="menu">
 		<ul class="navbar">
@@ -33,22 +32,22 @@
 			<li class="navlink"><a href="../pages/protection.html">Protection</a></li>
 			<li class="navlink"><a href="../pages/media.html">Media</a></li>
 			<li class="navlink"><a href="../pages/useful_links.html">Useful links</a></li>
-			<li class="cpage navlink"><a href="../pages/useful_links.html">Map</a></li>
+			<li class="navlink"><a href="../pages/flotplot.html">Chart</a></li>
+			<li class="navlink"><a href="../pages/map.html">Map</a></li>
+			<li class="cpage navlink"><a href="../pages/settings.html">Settings</a></li>
 		</ul>
 	</nav>
+	
 	<section class="content">
-		<div id="map"></div>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5ekUNEwekfUJdGPC7ia_SEHgXEjjNh8g&libraries=visualization" async defer></script>
-		<p>This map shows the living areas of lions. The markers show zoos in the Netherlands with lions!</p>
-		<input type="button" class="button" id="reset_zoom" value="Reset Zoom"/>
-		<input type="button" class="button" id="comment_section" value="Show comments">
-		<div id="comment_area" style="display: none">
-			<div style="padding: 1em 0em 1em 0em">
-				<textarea rows="2" placeholder="Username..." id="username_input"></textarea>
-				<textarea rows="2" placeholder="Type your comment here..." id="comment_input"></textarea>
-				<input type="button" class="button" value="Submit" id="submit" style="margin-top: 1em">
-			</div>
-		</div>
+		<p>Select your favorite font:
+		<form action="">
+			<input id="ptsans" type="radio" name="font" value="'PT Sans', sans-serif" style="display: none"><label for="ptsans" style="font-family: 'PT Sans', sans-serif">PT Sans</label><br>
+			<input id="baloobhaina" type="radio" name="font" value="'Baloo Bhaina', cursive" style="display: none"><label for="baloobhaina" style="font-family: 'Baloo Bhaina', cursive">Baloo Bhaina</label><br>
+			<input id="ranga" type="radio" name="font" value="'Ranga', cursive" style="display: none"><label for="ranga" style="font-family: 'Ranga', cursive">Ranga</label><br>
+			<input id="merriweather" type="radio" name="font" value="'Merriweather', serif" style="display: none"><label for="merriweather" style="font-family: 'Merriweather', serif">Merriweather</label><br>
+			<input id="cinzeldecorative" type="radio" name="font" value="'Cinzel Decorative', cursive" style="display: none"><label for="cinzeldecorative" style="font-family: 'Cinzel Decorative', cursive">Cinzel Decorative</label><br>
+		</form>
+		</p>	
 	</section>
 	</body>
 </html>

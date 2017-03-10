@@ -26,8 +26,8 @@ $(document).ready(function() {
 	
 	function load(){
 		if (document.cookie.length > 0){
-			$comments.push(extractCookie(document.cookie));
-			var $data = extractCookie(document.cookie).split(",");
+			$comments.push(getCookie("comments"));
+			var $data = getCookie("comments").split(",");
 			for (i = 0; i < $data.length; i+=2) {
 				createComment($data[i], $data[i+1]);
 			}
@@ -35,12 +35,8 @@ $(document).ready(function() {
 		}
 	}
 	
-	function extractCookie($cookie){
-		return decodeURIComponent($cookie.split("=")[1]);
-	}
-	
 	function createComment($username, $comment) {
-		$.get("/html/comment_section.html", function(response) {
+		$.get("https://raw.githubusercontent.com/wzwietering/lionwebsite/master/html/comment_section.html", function(response) {
 			$("#comment_area").prepend(response);
 			$("#comment").text($comment);
 			$("#username").text("~" + $username);
