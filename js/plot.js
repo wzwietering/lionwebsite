@@ -1,9 +1,10 @@
 $(document).ready(function()
 {
-		var label;		
+		var label;
+		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-        plot(jsondata);
-		label = jsondata.label;
+        plot(jsondata.lions);
+		label = jsondata.lions.label;
 		});		
 
 
@@ -23,20 +24,25 @@ $(document).ready(function()
 				if (item) {
 					var year = item.datapoint[0];
 						lionamount = item.datapoint[1];
-						if (y>50000){
-						str = "In " + year + " there were " + lionamount + " " + label + "!";
+						if (lionamount>50000){
+						text = "In " + year + " there were " + lionamount + " " + label + "!";
 						} else {
-						str = "In " + year + " there were ONLY " + lionamount + " " + label + "!";
+						text = "In " + year + " there were ONLY " + lionamount + " " + label + "!";
 						}
-						openInfo(item.pageX, item.pageY, str); 
+						openInfo(item.pageX, item.pageY, text); 
 				} else {
 					$("#info").remove();
 				}
 		});
 })
 
-function onclick(){
+function replot(){
+	$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
+	var combinedata = {jsondata.lions,jsondata.elephants};
+	plot(combinedata);
+	});
 }
+
 function plot(data){
 	var options = {
 					xaxis: 
@@ -59,5 +65,5 @@ function plot(data){
 						}
 		};
 		
-	$.plot($("#placeholder") ,[data], options);
+	flotplot = $.plot($("#placeholder") ,[data], options);
 }
