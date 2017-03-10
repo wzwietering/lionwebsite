@@ -3,8 +3,8 @@ $(document).ready(function()
 		var label;
 		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-        plot(jsondata.lions);
-		label = jsondata.lions.label;
+        plot([jsondata.elephants]);
+		label = jsondata.elephants.label;
 		});		
 
 
@@ -38,8 +38,11 @@ $(document).ready(function()
 
 function replot(){
 	$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-	var combinedata = {jsondata.lions,jsondata.elephants};
-	plot(combinedata);
+		dataset1=jsondata.lions;
+		dataset2=jsondata.elephants;
+		commbinedata=dataset1,dataset2;
+		datatest=jsondata.lions,jsondata.elephants;
+	plot([datatest]);
 	});
 }
 
@@ -52,8 +55,8 @@ function plot(data){
 					series: {
 						lines: { show: true},
 						points: { show: true },
-						color: ["#000"],
-						},
+						color: ["#293133"],
+						},	
 					grid: {
 						hoverable: true,
 						clickable: true,
@@ -65,5 +68,5 @@ function plot(data){
 						}
 		};
 		
-	flotplot = $.plot($("#placeholder") ,[data], options);
+	flotplot = $.plot($("#placeholder"), data, options);
 }
