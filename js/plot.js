@@ -3,6 +3,21 @@ $(document).ready(function()
 		var label;
 		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
+		
+		var i = 0;
+		$.each(jsondata, function(key, val) {
+			val.color = i;
+			++i;
+		});
+		
+		var choiceContainer = $("#choices");
+		$.each(datasets, function(key, val) {
+			choiceContainer.append("<br/><input type='checkbox' name='" + key +
+				"' checked='checked' id='id" + key + "'></input>" +
+				"<label for='id" + key + "'>"
+				+ val.label + "</label>");
+		});
+		
         plot([{data: jsondata.liondata,  label : jsondata.lionlabel}]);
 		label = jsondata.lionlabel;
 		});		
