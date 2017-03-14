@@ -1,5 +1,5 @@
 {
-	"lion":{
+	"lions":{
 		"label": "lions",
 		"liondata": [
 			[1950, 200000],
@@ -32,7 +32,7 @@
 			[1950, 16000]
 		]
 	},
-	"Zebra's":{
+	"Zebras":{
 		"label": "Zebras",
 		"data": [
 			[2017, 45000],

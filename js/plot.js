@@ -33,9 +33,10 @@ $(document).ready(function()
 			if (data.length > 0) {
 				plot(data);
 			}
-		}
+		};
 		
 		checkBox.find("input").click(updatePlot);
+		updatePlot();
 		});		
 
 
