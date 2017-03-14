@@ -4,22 +4,38 @@ $(document).ready(function()
 		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
 		
+		 
 		var i = 0;
 		$.each(jsondata, function(key, val) {
 			val.color = i;
 			++i;
 		});
 		
-		var choiceContainer = $("#choices");
-		$.each(datasets, function(key, val) {
-			choiceContainer.append("<br/><input type='checkbox' name='" + key +
+		var checkBox = $("#choices");
+		$.each(jsondata, function(key, val) {
+			checkBox.append("<br/><input type='checkbox' name='" + key +
 				"' checked='checked' id='id" + key + "'></input>" +
 				"<label for='id" + key + "'>"
 				+ val.label + "</label>");
 		});
 		
-        plot([jsondata]);
-		label = jsondata.lionlabel;
+		function updatePlot() {
+
+			var data = [];
+
+			checkBox.find("input:checked").each(function () {
+				var key = $(this).attr("name");
+				if (key && jsondata[key]) {
+					data.push(jsondata[key]);
+				}
+			});
+
+			if (data.length > 0) {
+				plot(data);
+			}
+		}
+		
+		checkBox.find("input").click(updatePlot);
 		});		
 
 
@@ -49,32 +65,8 @@ $(document).ready(function()
 					$("#info").remove();
 				}
 		});
-		
-		choiceContainer.find("input").click(plotAccordingToChoices);
-		
-		function plotAccordingToChoices() {
 
-			var data = [];
-
-			choiceContainer.find("input:checked").each(function () {
-				var key = $(this).attr("name");
-				if (key && datasets[key]) {
-					data.push(datasets[key]);
-				}
-			});
-
-			if (data.length > 0) {
-				plot([data]);
-			}
-		}
-
-})
-
-function replot(){
-	$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-	plot([jsondata]);
-	});
-}
+});
 
 function plot(data){
 	var options = {

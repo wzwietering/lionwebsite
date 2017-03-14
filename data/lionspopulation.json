@@ -1,6 +1,6 @@
 {
 	"lion":{
-		"label": "lions in the wild",
+		"label": "lions",
 		"liondata": [
 			[1950, 200000],
 			[1990, 100000],
@@ -11,7 +11,7 @@
 		]
 	},
 	"elephants":{
-		"label": "elephants in the wild",
+		"label": "elephants",
 		"data": [
 			[2017, 200000],
 			[2014, 100000],
@@ -22,7 +22,7 @@
 		]
 	},
 	"giraffes":{
-		"label": "elephants in the wild",
+		"label": "giraffes",
 		"data": [
 			[2017, 100000],
 			[2014, 200000],
@@ -33,7 +33,7 @@
 		]
 	},
 	"Zebra's":{
-		"label": "elephants in the wild",
+		"label": "Zebras",
 		"data": [
 			[2017, 45000],
 			[2014, 100000],
