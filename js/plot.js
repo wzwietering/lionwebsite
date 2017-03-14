@@ -18,7 +18,7 @@ $(document).ready(function()
 				+ val.label + "</label>");
 		});
 		
-        plot([{data: jsondata.liondata,  label : jsondata.lionlabel}]);
+        plot([jsondata]);
 		label = jsondata.lionlabel;
 		});		
 
@@ -40,15 +40,34 @@ $(document).ready(function()
 					var year = item.datapoint[0];
 						lionamount = item.datapoint[1];
 						if (lionamount>50000){
-						text = "In " + year + " there were " + lionamount + " " + label + "!";
+						text = "In " + year + " there were " + lionamount + " " + item.series + "!";
 						} else {
-						text = "In " + year + " there were ONLY " + lionamount + " " + label + "!";
+						text = "In " + year + " there were ONLY " + lionamount + " " + item.series + "!";
 						}
 						openInfo(item.pageX, item.pageY, text); 
 				} else {
 					$("#info").remove();
 				}
 		});
+		
+		choiceContainer.find("input").click(plotAccordingToChoices);
+		
+		function plotAccordingToChoices() {
+
+			var data = [];
+
+			choiceContainer.find("input:checked").each(function () {
+				var key = $(this).attr("name");
+				if (key && datasets[key]) {
+					data.push(datasets[key]);
+				}
+			});
+
+			if (data.length > 0) {
+				plot([data]);
+			}
+		}
+
 })
 
 function replot(){
