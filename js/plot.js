@@ -55,11 +55,11 @@ $(document).ready(function()
 		$("#placeholder").bind("plothover", function(event, pos, item) {
 				if (item) {
 					var year = item.datapoint[0];
-						lionamount = item.datapoint[1];
-						if (lionamount>50000){
-						text = "In " + year + " there were " + lionamount + " " + item.series + "!";
+						animalcount = item.datapoint[1];
+						if (animalcount>50000){
+						text = "In " + year + " there were " + animalcount + " " + item.series.label + " in the wild!";
 						} else {
-						text = "In " + year + " there were ONLY " + lionamount + " " + item.series + "!";
+						text = "In " + year + " there were ONLY " + animalcount + " " + item.series.label + " in the wild!";
 						}
 						openInfo(item.pageX, item.pageY, text); 
 				} else {

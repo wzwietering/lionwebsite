@@ -309,11 +309,17 @@ table, th, td{
 
 #placeholder > div.legend > table {
   border-collapse: true;
-  width: 14%;
+  width: 10%;
 }
 #placeholder{
-	position:center;
-	margin:auto;
+	position:relative;
 	width: 750px;
 	height: 350px;
+	margin-left:20%;
+}
+#totalimage{
+	display:flex;
+}
+#choices{
+	text-align:left;
 }
