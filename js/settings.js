@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	$("#body").css("font-family", getCookie('font'));
-	changeStyle(getCookie('dark'), getCookie('darkest'), getCookie('light'));
+	//Check to prevent white color if no cookies exist
+	if(getCookie('dark') != 'undefined'){
+		changeStyle(getCookie('dark'), getCookie('darkest'), getCookie('light'));
+	}
 	
 	$("input[name=font]:radio").change(function () {
 		$font = $(this).val();

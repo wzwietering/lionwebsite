@@ -13,8 +13,8 @@ $(document).ready(function() {
 	  
 		//Style of the map
 		map.data.setStyle({
-			fillColor: '#E65100',
-			strokeColor: '#B94000',
+			fillColor: '#DB9200',
+			strokeColor: '#DB6300',
 			strokeWeight: 1
 		});
 		
