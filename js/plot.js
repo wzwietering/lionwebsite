@@ -1,14 +1,11 @@
 $(document).ready(function()
 {
-		var label;
-		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
 		
-		 
-		var i = 0;
+		var color = 0;
 		$.each(jsondata, function(key, val) {
-			val.color = i;
-			++i;
+			val.color = color;
+			++color;
 		});
 		
 		var checkBox = $("#choices");
@@ -19,7 +16,7 @@ $(document).ready(function()
 				+ val.label + "</label>");
 		});
 		
-		function updatePlot() {
+		function updatePlot(event) {
 
 			var data = [];
 
@@ -32,6 +29,10 @@ $(document).ready(function()
 
 			if (data.length > 0) {
 				plot(data);
+			}
+			else { 
+				alert("You need to select at least 1 animal!");
+				event.target.checked =  true;
 			}
 		};
 		
@@ -77,8 +78,7 @@ function plot(data){
 						{min:0, max: 200000},
 					series: {
 						lines: { show: true},
-						points: { show: true },
-						color: ["#293133"],
+						points: { show: true }
 						},	
 					grid: {
 						hoverable: true,

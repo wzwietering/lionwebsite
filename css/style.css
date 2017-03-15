@@ -321,5 +321,7 @@ table, th, td{
 	display:flex;
 }
 #choices{
+	margin: auto;
 	text-align:left;
+    width: 130px;
 }
