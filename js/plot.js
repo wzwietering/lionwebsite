@@ -1,10 +1,43 @@
 $(document).ready(function()
 {
-		var label;
-		var flotplot;
 		$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-        plot([{data: jsondata.liondata,  label : jsondata.lionlabel}]);
-		label = jsondata.lionlabel;
+		
+		var color = 0;
+		$.each(jsondata, function(key, val) {
+			val.color = color;
+			++color;
+		});
+		
+		var checkBox = $("#choices");
+		$.each(jsondata, function(key, val) {
+			checkBox.append("<br/><input type='checkbox' name='" + key +
+				"' checked='checked' id='id" + key + "'></input>" +
+				"<label for='id" + key + "'>"
+				+ val.label + "</label>");
+		});
+		
+		function updatePlot(event) {
+
+			var data = [];
+
+			checkBox.find("input:checked").each(function () {
+				var key = $(this).attr("name");
+				if (key && jsondata[key]) {
+					data.push(jsondata[key]);
+				}
+			});
+
+			if (data.length > 0) {
+				plot(data);
+			}
+			else { 
+				alert("You need to select at least 1 animal!");
+				event.target.checked =  true;
+			}
+		};
+		
+		checkBox.find("input").click(updatePlot);
+		updatePlot();
 		});		
 
 
@@ -23,24 +56,19 @@ $(document).ready(function()
 		$("#placeholder").bind("plothover", function(event, pos, item) {
 				if (item) {
 					var year = item.datapoint[0];
-						lionamount = item.datapoint[1];
-						if (lionamount>50000){
-						text = "In " + year + " there were " + lionamount + " " + label + "!";
+						animalcount = item.datapoint[1];
+						if (animalcount>50000){
+						text = "In " + year + " there were " + animalcount + " " + item.series.label + " in the wild!";
 						} else {
-						text = "In " + year + " there were ONLY " + lionamount + " " + label + "!";
+						text = "In " + year + " there were ONLY " + animalcount + " " + item.series.label + " in the wild!";
 						}
 						openInfo(item.pageX, item.pageY, text); 
 				} else {
 					$("#info").remove();
 				}
 		});
-})
 
-function replot(){
-	$.getJSON('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionspopulation.json' , function(jsondata){
-	plot([jsondata]);
-	});
-}
+});
 
 function plot(data){
 	var options = {
@@ -50,8 +78,7 @@ function plot(data){
 						{min:0, max: 200000},
 					series: {
 						lines: { show: true},
-						points: { show: true },
-						color: ["#293133"],
+						points: { show: true }
 						},	
 					grid: {
 						hoverable: true,
