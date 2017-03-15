@@ -39,8 +39,10 @@ function createCookie($name, $value){
 
 function getCookie($name) {
 	var $value = "; " + document.cookie;
-	var $parts = $value.split("; " + $name + "=");
-	if ($parts.length == 2) return decodeURIComponent($parts.pop().split(";").shift());
+	if(typeof $value !== 'undefined'){
+		var $parts = $value.split("; " + $name + "=");
+		if ($parts.length == 2) return decodeURIComponent($parts.pop().split(";").shift());
+	}
 }
 
 function changeStyle($dark, $darkest, $light){

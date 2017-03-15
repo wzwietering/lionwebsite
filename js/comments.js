@@ -27,9 +27,12 @@ $(document).ready(function() {
 	function load(){
 		if (document.cookie.length > 0){
 			$comments.push(getCookie("comments"));
-			var $data = getCookie("comments").split(",");
-			for (i = 0; i < $data.length; i+=2) {
-				createComment($data[i], $data[i+1]);
+			var $data = getCookie("comments");
+			if(typeof $data !== 'undefined'){
+				$data = $data.split(",");
+				for (i = 1; i < $data.length; i+=2) {
+					createComment($data[i], $data[i+1]);
+				}
 			}
 			$loaded = true;
 		}
