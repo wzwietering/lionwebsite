@@ -5,7 +5,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
 
 html{
-	background-color: #fffdbc;
+	--dark: #DB9200;
+	--light: #FFFDBC;
+	--darkest: #DB6300;
 }
 
 body {
@@ -13,6 +15,7 @@ body {
 	margin-bottom: 50px;
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
+	background-color: var(--light);
 }
 
 section.content,
@@ -23,7 +26,7 @@ nav.content {
 
 nav.content {
     overflow: hidden;
-    background-color: #db9200;
+    background-color: var(--dark);
 }
 
 p {
@@ -60,7 +63,7 @@ li.navlink a {
 
 label.menutoggle:hover,
 li.navlink a:hover {
-    background-color: #996600;
+    background-color: var(--darkest);
 }
 
 img {
@@ -213,7 +216,7 @@ a.linklistlink:focus {
 }
 
 .button {
-	background-color: #db9200;
+	background-color: var(--dark);
     border: none;
     color: white;
     padding: 12px 15px;
@@ -223,7 +226,7 @@ a.linklistlink:focus {
 }
 
 .button:hover {
-	background-color: #DB6300;
+	background-color: var(--darkest);
 }
 
 #comment_area {
@@ -232,12 +235,12 @@ a.linklistlink:focus {
 
 /*Comment styles*/
 #comment_area > * {
-	border-top: thin solid #db9200;
+	border-top: thin solid var(--dark);
 }
 
 textarea {
 	font-family: 'PT Sans', sans-serif;
-	border-color: #db9200;
+	border-color: var(--dark);
 	resize: none;
 }
 
@@ -254,7 +257,7 @@ textarea {
 }
 
 input[type="radio"]:checked + label {
-    border: solid 1px #db9200;
+    border: solid 1px var(--dark);
 }
 
 
