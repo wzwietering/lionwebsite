@@ -314,17 +314,41 @@ table, th, td{
   border-collapse: true;
   width: 10%;
 }
+
 #placeholder{
 	position:relative;
 	width: 750px;
 	height: 350px;
 	margin-left:20%;
 }
+
 #totalimage{
 	display:flex;
 }
+
 #choices{
 	margin: auto;
 	text-align:left;
     width: 130px;
+}
+
+.context-menu {
+	display: none;
+	border: 1px solid var(--dark);
+	position: absolute;
+	z-index: 100;
+	background: white;
+    overflow: hidden;
+	white-space: no-wrap;
+	padding: 0px;
+}
+
+.context-menu li {
+	list-style-type: none;
+	padding: 8px 20px;
+}
+
+.context-menu li:hover {
+	cursor: pointer;
+	background-color: var(--dark);
 }
