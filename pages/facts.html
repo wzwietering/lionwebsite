@@ -3,6 +3,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
 		<link rel="icon" type="image/x-icon" href="../images/lion.ico">
+		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/comments.js"></script>
+		<script type="text/javascript" src="../js/settings.js"></script>
 		<title>Lions are awesome</title>
 		
 		<!--Meta tags-->
@@ -18,7 +21,7 @@
 		<meta name='HandheldFriendly' content='True'>
 	</head>
 
-	<body>
+	<body id="body">
 	<input type="checkbox" id="menu-toggle"/>
 	<nav class="content" id="menu">
 		<ul class="navbar">
@@ -89,6 +92,14 @@
 			<img src="../images/malefemale.jpg" height="400" width class="factth"="350">
 			<figcaption style="max-width class="factth": 350px" class="text">A female and a male next to each other</figcaption>			
 		</figure>
+		<input type="button" class="button" id="comment_section" value="Show comments">
+		<div id="comment_area" style="display: none">
+			<div style="padding: 1em 0em 1em 0em">
+				<textarea rows="2" placeholder="Username..." id="username_input"></textarea>
+				<textarea rows="2" placeholder="Type your comment here..." id="comment_input"></textarea>
+				<input type="button" class="button" value="Submit" id="submit" style="margin-top: 1em">
+			</div>
+		</div>
 	</section>
 	</body>
 </html>
