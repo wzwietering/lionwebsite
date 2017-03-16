@@ -2,8 +2,8 @@ $(document).ready(function() {
 	$(document).bind("contextmenu", function (event) {
 		event.preventDefault();
 		 $(".context-menu").finish().toggle(200).
-		
-		// In the right position (the mouse)
+
+		// Set location to mouse
 		css({
 			top: event.pageY + "px",
 			left: event.pageX + "px"
@@ -15,12 +15,11 @@ $(document).ready(function() {
 			$(".context-menu").hide(200);
 		}
 	});
-	
+
 	$bold = false;
 	$italic = false;
 	$smallCaps = false;
-	$inverted = false;
-	
+
 	$(".context-menu li").click(function(){
 		switch($(this).attr("data-action")) {
 			case "bold":
@@ -48,15 +47,6 @@ $(document).ready(function() {
 				} else {
 					$("#body").css("font-variant", 'small-caps');
 					$smallCaps = true;
-				}
-				break;
-			case "inverted":
-				if($inverted){
-					$(document.documentElement).css("filter", 'invert(0%);');
-					$inverted = false;
-				} else {
-					$(document.documentElement).css("filter", 'invert(100%);');
-					$inverted = true;
 				}
 				break;
 		}

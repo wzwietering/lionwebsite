@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
 
 html{
-	--dark: #DB9200;
-	--light: #FFFDBC;
-	--darkest: #DB6300;
+	--accents: #DB9200;
+	--background: #FFFDBC;
+	--details: #DB6300;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 	margin-bottom: 50px;
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
-	background-color: var(--light);
+	background-color: var(--background);
 }
 
 section.content,
@@ -26,7 +26,7 @@ nav.content {
 
 nav.content {
     overflow: hidden;
-    background-color: var(--dark);
+    background-color: var(--accents);
 }
 
 p {
@@ -41,10 +41,10 @@ p {
 
 
 /*Menu*/
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 	margin-bottom: 10px;
 }
 
@@ -63,7 +63,7 @@ li.navlink a {
 
 label.menutoggle:hover,
 li.navlink a:hover {
-    background-color: var(--darkest);
+    background-color: var(--details);
 }
 
 img {
@@ -89,6 +89,8 @@ figure .text {
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
 	transition: 0.5s ease-in-out;
 	color: black;
 	margin: 0 auto;
@@ -100,6 +102,8 @@ figure .source {
 	visibility: hidden;
 	opacity: 0;
 	-webkit-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
 	transition: 0.5s ease-in-out;
 	font-size: 0.8em;
 }
@@ -121,8 +125,8 @@ figure {
 	display: inline-block;
 }
 
-figure.gallery {
-	margin: 0px;
+.gallery {
+	margin: 0;
 	height: 300px;
 	width: 100%;
 	overflow: hidden;
@@ -216,7 +220,7 @@ a.linklistlink:focus {
 }
 
 .button {
-	background-color: var(--dark);
+	background-color: var(--accents);
     border: none;
     color: white;
     padding: 12px 15px;
@@ -226,7 +230,7 @@ a.linklistlink:focus {
 }
 
 .button:hover {
-	background-color: var(--darkest);
+	background-color: var(--details);
 }
 
 #comment_area {
@@ -235,12 +239,12 @@ a.linklistlink:focus {
 
 /*Comment styles*/
 #comment_area > * {
-	border-top: thin solid var(--dark);
+	border-top: thin solid var(--accents);
 }
 
 textarea {
 	font-family: 'PT Sans', sans-serif;
-	border-color: var(--dark);
+	border-color: var(--accents);
 	resize: none;
 }
 
@@ -257,7 +261,7 @@ textarea {
 }
 
 input[type="radio"]:checked + label {
-    border: solid 1px var(--dark);
+    border: solid 1px var(--accents);
 }
 
 
@@ -272,34 +276,34 @@ input[type="radio"]:checked + label {
 	.box {
 	  width: auto;
 	}
-	
+
 	label.menutoggle,
 	li.navlink a {
 	  display: block;
 	}
-	 
+
 	li.navlink {
 	  float: none;
 	}
-	
+
 	#toggletext {
 		display: inline;
 	}
-	
+
 	figure .text,
 	figure .source {
 		opacity: 1;
 		visibility: visible;
 	}
-	
+
 	#lionlogo {
 		display: none;
 	}
-	
+
 	table {
 		width: 100% !important;
 	}
-	
+
 	textarea {
 		width: 100% !important;
 	}
@@ -334,13 +338,13 @@ table, th, td{
 
 .context-menu {
 	display: none;
-	border: 1px solid var(--dark);
+	border: 1px solid var(--accents);
 	position: absolute;
 	z-index: 100;
 	background: white;
     overflow: hidden;
-	white-space: no-wrap;
-	padding: 0px;
+	white-space: nowrap;
+	padding: 0;
 }
 
 .context-menu li {
@@ -350,5 +354,5 @@ table, th, td{
 
 .context-menu li:hover {
 	cursor: pointer;
-	background-color: var(--dark);
+	background-color: var(--accents);
 }

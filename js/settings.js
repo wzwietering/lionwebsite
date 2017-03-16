@@ -1,18 +1,18 @@
 $(document).ready(function() {
 	$("#body").css("font-family", getCookie('font'));
 	//Check to prevent white color if no cookies exist
-	if(getCookie('dark') != 'undefined'){
-		changeStyle(getCookie('dark'), getCookie('darkest'), getCookie('light'));
+	if(getCookie('accents') != 'undefined'){
+		changeStyle(getCookie('accents'), getCookie('details'), getCookie('background'));
 	}
-	
+
 	$("input[name=font]:radio").change(function () {
 		$font = $(this).val();
 		$("#body").css("font-family", $font);
-		
+
 		//Store selected font
 		createCookie('font', $font);
 	});
-	
+
 	$("input[name=color]:radio").change(function () {
 		$color = $(this).val();
 		var bodyStyles = window.getComputedStyle(document.body);
@@ -21,7 +21,7 @@ $(document).ready(function() {
 				changeStyle('#1DD600','#26BC70','#c1f9bd');
 				break;
 			case 'blue':
-				changeStyle('#1539B2','#0874A8','#ccccff');
+				changeStyle('#1539B2','#0874A8','#c9d4f9');
 				break;
 			default:
 				changeStyle('#DB9200','#DB6300','#FFFDBC');
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		}
 	});
 });
-	
+
 function createCookie($name, $value){
 	var $date = new Date();
 	$date.setTime($date.getTime() + (365*24*60*60*1000));
@@ -45,11 +45,11 @@ function getCookie($name) {
 	}
 }
 
-function changeStyle($dark, $darkest, $light){
-	document.body.style.setProperty('--dark', $dark);
-	document.body.style.setProperty('--darkest', $darkest);
-	document.body.style.setProperty('--light', $light);
-	createCookie('dark', $dark);
-	createCookie('darkest', $darkest);
-	createCookie('light', $light);
+function changeStyle($accents, $details, $background){
+	document.body.style.setProperty('--accents', $accents);
+	document.body.style.setProperty('--details', $details);
+	document.body.style.setProperty('--background', $background);
+	createCookie('accents', $accents);
+	createCookie('details', $details);
+	createCookie('background', $background);
 }
