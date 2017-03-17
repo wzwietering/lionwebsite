@@ -2,6 +2,7 @@ $(document).ready(function() {
 	var $loaded = false;
 	var $comments = [];
 	
+	// Toggle visibility of the comments, load cookies when necessary
 	$("#comment_section").click(function() {
 		if(!($("#comment_area").is(":visible"))){
 			if(!$loaded){
@@ -15,6 +16,7 @@ $(document).ready(function() {
 		}
 	});
 	
+	// Post comment on submission
 	$("#submit").click(function() {
 		var $comment = $("#comment_input").val();
 		var $username = $("#username_input").val();
@@ -24,6 +26,7 @@ $(document).ready(function() {
 		$("#username_input").val("");
 	});
 	
+	// Load comments from cookie
 	function load(){
 		if (document.cookie.length > 0){
 			$comments.push(getCookie("comments"));
@@ -38,6 +41,7 @@ $(document).ready(function() {
 		}
 	}
 	
+	// Add a comment to the page
 	function createComment($username, $comment) {
 		$.get("https://raw.githubusercontent.com/wzwietering/lionwebsite/master/html/comment_section.html", function(response) {
 			$("#comment_area").prepend(response);

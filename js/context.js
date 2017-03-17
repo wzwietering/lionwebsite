@@ -9,13 +9,15 @@ $(document).ready(function() {
 			left: event.pageX + "px"
 		});
 	});
-
+	
+	// Remove menu when you click somewhere
 	$(document).bind("mousedown", function (e) {
 		if (!$(e.target).parents(".context-menu").length > 0) {
 			$(".context-menu").hide(200);
 		}
 	});
 
+	// Variables to store layout
 	$bold = false;
 	$italic = false;
 	$smallCaps = false;
@@ -50,6 +52,6 @@ $(document).ready(function() {
 				}
 				break;
 		}
-		$(".context-menu").hide(100);
+		$(".context-menu").hide(200);
 	});
 });

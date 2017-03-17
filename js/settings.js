@@ -30,6 +30,7 @@ $(document).ready(function() {
 	});
 });
 
+// Create a cookie which lasts a year
 function createCookie($name, $value){
 	var $date = new Date();
 	$date.setTime($date.getTime() + (365*24*60*60*1000));
@@ -37,6 +38,7 @@ function createCookie($name, $value){
 	document.cookie = $name + "=" + encodeURIComponent($value) + ";" + $expires + ";path=/";
 }
 
+// Get a cookie by it's name
 function getCookie($name) {
 	var $value = "; " + document.cookie;
 	if(typeof $value !== 'undefined'){
@@ -45,6 +47,7 @@ function getCookie($name) {
 	}
 }
 
+// Change the style of the webpage
 function changeStyle($accents, $details, $background){
 	document.body.style.setProperty('--accents', $accents);
 	document.body.style.setProperty('--details', $details);

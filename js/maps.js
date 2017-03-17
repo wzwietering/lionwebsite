@@ -1,15 +1,23 @@
 $(document).ready(function() {
 	var map;
-	var $default_zoom = 3;
-	var $default_center = {lat: 20, lng: 10};
+	var $defaultZoom = 3;
+	var $defaultCenter = {lat: 20, lng: 10};
 	
 	$(function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
-			zoom: $default_zoom,
-			center: $default_center
+			zoom: $defaultZoom,
+			center: $defaultCenter
 		});
 	  
 		map.data.loadGeoJson('https://raw.githubusercontent.com/wzwietering/lionwebsite/master/data/lionhabitat.geojson');
+		var data = map.data;
+		data.forEach(function(feature){
+			alert('hallo');
+		});
+		
+		$.each(data.features, function(key, val) {
+			alert('hi');
+		});
 	  
 		//Style of the map
 		map.data.setStyle({
@@ -46,7 +54,7 @@ $(document).ready(function() {
 
 
 	$("#reset_zoom").click(function() {
-		map.setZoom($default_zoom);
-		map.setCenter($default_center);
+		map.setZoom($defaultZoom);
+		map.setCenter($defaultCenter);
 	});
 });

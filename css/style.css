@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
 
-html{
+:root {
 	--accents: #DB9200;
 	--background: #FFFDBC;
 	--details: #DB6300;
