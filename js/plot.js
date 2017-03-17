@@ -36,6 +36,10 @@ $(document).ready(function()
 			}
 		};
 		
+		window.onresize = function(event) {
+			updatePlot(null);
+		}
+		
 		checkBox.find("input").click(updatePlot);
 		updatePlot();
 		});		
